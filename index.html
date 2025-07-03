@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portafolio de Victor Vera Velarde</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("TU_PUBLIC_KEY"); // Reemplaza con tu clave pública
+  })();
+</script>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Portafolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-primary text-white text-center py-5" id="header">
+    <div class="container">
+      <img src="https://i.imgur.com/lQ0z3P0.jpg" class="rounded-circle mb-3" width="150" alt="Avatar">
+      <h1>Victor Vera Velarde</h1>
+      <p class="lead">Desarrollador Web Front-End</p>
+    </div>
+  </header>
+
+<!-- CARRUSEL DE IMÁGENES -->
+<section id="carousel" class="py-5 bg-dark">
+  <div class="container">
+    <h2 class="text-center text-white mb-4">Galería de Proyectos</h2>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner rounded shadow">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="https://www.kindpng.com/picc/m/74-744811_lead-generation-landing-pages-thrive-architect-landing-pages.png" class="d-block w-100" alt="Landing Page">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Landing Page</h5>
+            <p>Sitio web responsivo para empresas.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="https://img.freepik.com/foto-gratis/mostrando-carro-carro-compras-linea-signo-grafico_53876-133967.jpg?semt=ais_hybrid&w=740" class="d-block w-100" alt="Tienda Online">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Tienda Online</h5>
+            <p>Catálogo de productos con carrito en JS.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="https://st2.depositphotos.com/4107269/7705/i/450/depositphotos_77053627-stock-photo-journalist-working-on-his-new.jpg" class="d-block w-100" alt="Blog Personal">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Blog Personal</h5>
+            <p>Blog dinámico con Bootstrap y entradas.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!-- SOBRE MÍ -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Sobre mí</h2>
+      <p>Soy un profesional con 10 años de experiencia en las tecnologías de la información programador de sistemas informáticos, docente y estoy siempre en búsqueda activa de trabajo, soy una persona responsable con valores y principios me gusta los retos, el trabajo en grupo
+      soy un apasionado del desarrollo web, especializado en crear sitios modernos y responsivos con HTML5, CSS3, JavaScript y Bootstrap. Me encanta construir interfaces limpias, accesibles y funcionales.</p>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Proyectos</h2>
+      <div class="row" id="project-list">
+        <!-- Aquí se insertarán los proyectos con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contacto</h2>
+      <form id="contact-form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Victor M. Vera Velarde. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
